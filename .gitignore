@@ -1,0 +1,84 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/**/lock.lock
+!gradle.properties
+
+# Gradle Build Cache
+**/build/
+
+# Android Studio
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/shelf/
+.idea/**/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/codeStyles/Project.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/dictionaries/
+
+# User-specific configurations
+.idea/**/user.xml
+.idea/**/runConfigurations/
+.idea/httpRequests/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+
+# Kotlin
+*.kotlin_metadata
+*.kotlin_module
+*.class
+
+# Log Files
+*.log
+
+# Android specific files
+*.apk
+*.ap_
+*.dex
+*.class
+*.so
+*.jar
+*.aar
+*.aab
+*.hprof
+
+# Proguard
+proguard/
+proguard/*.mapping
+
+# Java bytecode
+*.class
+
+# Compiled resource files
+*.rsc
+*.rsd
+*.scc
+
+# Keystore files
+*.jks
+
+# OS Generated files
+.DS_Store
+Thumbs.db
+
+# Others
+bin/
+.gen/
+.cxx/
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.swp
+*.lock
+*.~*
