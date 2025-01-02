@@ -72,6 +72,7 @@ proguard/*.mapping
 Thumbs.db
 
 # Others
+app/local.properties
 bin/
 .gen/
 .cxx/

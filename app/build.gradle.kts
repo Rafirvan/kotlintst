@@ -1,3 +1,6 @@
+import java.util.Properties
+
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -18,9 +21,15 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        val apiKey: String? = rootProject.file("app/local.properties")
+            .takeIf { it.exists() }
+            ?.let { file ->
+                Properties().apply {
+                    file.inputStream().use { load(it) }
+                }.getProperty("TMDB_API_KEY")
+            } ?: throw GradleException("TMDB_API_KEY is missing. Please add it to local.properties.")
 
-        buildConfigField("String", "TMDB_API_KEY", "\"YOUR_API_KEY_HERE\"")
-        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
+        buildConfigField("String", "TMDB_API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {

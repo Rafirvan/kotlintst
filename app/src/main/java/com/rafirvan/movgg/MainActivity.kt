@@ -23,7 +23,7 @@ import com.rafirvan.movgg.viewmodel.MoviesViewModel
 import com.rafirvan.movgg.viewmodel.SelectedMovieViewModel
 
 public class MainActivity : ComponentActivity() {
-    val tmdbService = TmdbService("eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZTlmNWEwNDhhNTBhOWFkODE0NDkxN2U2NjQwMjM1ZCIsIm5iZiI6MTczNTUyNzkwNS44NzAwMDAxLCJzdWIiOiI2NzcyMGRlMTA1YzQ2YWIzZmM5MjliOTEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.2IOjdYhafgaXS1mgSFpxFMPidabR4TqP6kLxor3X5IQ")
+    val tmdbService = TmdbService(BuildConfig.TMDB_API_KEY)
     private val viewModelFactory = object : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             return when {
